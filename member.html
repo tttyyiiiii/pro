@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Computer scince</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="#">Computer scince</a></div>
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Fields.html">Fields</a></li>
+                <li><a href="member.html">Members</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+
+        <h1 class="heading">Members</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="image/2851439.png" alt="">
+                <h3>Abeer Al-balawi</h3>
+                <p>I a passionate Computer Science student. I'm focused on algorithms and software design, and I'm eager
+                    to apply my skills to tackle complex problems.</p>
+            </div>
+            <div class="box">
+                <img src="image/2851439.png" alt="">
+                <h3>Rital Al-zahrani</h3>
+                <p>I'm excited to contribute to cutting-edge projects and make a meaningful impact in the field of
+                    Computer Science.</p>
+            </div>
+            <div class="box">
+                <img src="image/2851439.png" alt="">
+                <h3>Renad Al-montashri</h3>
+                <p>I'm a dedicated Computer Science student. I have strong programming skills and strive to develop
+                    efficient solutions to complex problems.</p>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+<script>
+    function shuffleBoxes() {
+        var container = document.querySelector('.box-container');
+        var boxes = container.getElementsByClassName('box');
+        var boxArray = Array.from(boxes);
+
+        boxArray.sort(function () {
+            return 0.4 - Math.random();
+        });
+
+        for (var i = 0; i < boxArray.length; i++) {
+            container.appendChild(boxArray[i]);
+        }
+    }
+
+    shuffleBoxes();
+</script>
+
+</html>

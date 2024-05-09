@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Computer scince</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav__content">
+            <div class="logo"><a href="#">Computer scince</a></div>
+            <label for="check" class="checkbox">
+                <i class="ri-menu-line"></i>
+            </label>
+            <input type="checkbox" name="check" id="check" />
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Fields.html">Fields</a></li>
+                <li><a href="member.html">Members</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="contact" style="margin-top: 90px;">
+        <h2>Contact Us</h2>
+        <p style="text-align: center;"> Feel free to get in touch with us for any inquiries or feedback. We'd love to
+            hear from you!</p>
+        <form onsubmit="return validateForm()">
+            <input type="text" placeholder="Your Name">
+            <input type="email" id="emailInput" placeholder="Your Email">
+            <span id="emailError" style="color: red; display: none;">Please enter a valid email address.</span>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </section>
+
+</body>
+<script>
+    function validateForm() {
+        var emailInput = document.getElementById('emailInput');
+        var emailError = document.getElementById('emailError');
+        var email = emailInput.value;
+        var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!regex.test(email)) {
+            emailError.style.display = 'inline';
+            return false;
+        } else {
+            emailError.style.display = 'none';
+            return true;
+        }
+    }
+
+
+
+</script>
+
+</html>
